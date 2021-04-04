@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="573.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionetudiant.C_DashboardProf">
+   <children>
+      <Text layoutX="50.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des classes">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="460.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste professeurs">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tblv_Classe" layoutX="18.0" layoutY="122.0" onMouseClicked="#handle_ListEtudiantParClasse" prefHeight="417.0" prefWidth="300.0">
+        <columns>
+          <TableColumn fx:id="tblc_id" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="tblc_Libelle" prefWidth="75.0" text="Libelle" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tblv_professeurs" layoutX="354.0" layoutY="122.0" prefHeight="417.0" prefWidth="402.0">
+         <columns>
+            <TableColumn fx:id="tblc_matiere" prefWidth="75.0" text="Matiere" />
+            <TableColumn fx:id="tblc_nomprenom" prefWidth="118.0" text="Nom et prenom" />
+            <TableColumn fx:id="tblc_grade" prefWidth="118.0" text="Grade" />
+         </columns>
+      </TableView>
+      <Pane fx:id="pane_addclasse" layoutX="6.0" prefHeight="82.0" prefWidth="377.0" />
+   </children>
+</AnchorPane>

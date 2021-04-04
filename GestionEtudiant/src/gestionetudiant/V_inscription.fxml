@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="566.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionetudiant.C_inscriptionController">
+   <children>
+      <TextField fx:id="txt_Id" layoutX="159.0" layoutY="76.0" prefHeight="25.0" prefWidth="299.0" />
+      <TextField fx:id="txt_NomComplet" layoutX="160.0" layoutY="130.0" prefHeight="25.0" prefWidth="299.0" />
+      <TextField fx:id="txt_tuteur" layoutX="160.0" layoutY="196.0" prefHeight="25.0" prefWidth="299.0" />
+      <Label layoutX="160.0" layoutY="43.0" prefHeight="17.0" prefWidth="190.0" text="ID">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="160.0" layoutY="106.0" prefHeight="17.0" prefWidth="190.0" text="Nom &amp; prenom">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="162.0" layoutY="174.0" prefHeight="17.0" prefWidth="190.0" text="Tuteur">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmb_annescolaire" layoutX="192.0" layoutY="427.0" prefHeight="25.0" prefWidth="236.0" />
+      <Label layoutX="246.0" layoutY="248.0" prefHeight="17.0" prefWidth="190.0" text="Classe">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="233.0" layoutY="394.0" prefHeight="17.0" prefWidth="190.0" text="Annee-Scolaire">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="171.0" layoutY="2.0" prefHeight="25.0" prefWidth="339.0" text="INSCRIPTION D'UN ETUDIANT">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="273.0" layoutY="465.0" mnemonicParsing="false" onAction="#handle_Ajouter" text="Ajouter" />
+      <TableView fx:id="tblv_Classe2" layoutX="104.0" layoutY="283.0" onMouseClicked="#handle_ListEtudiantParClasse" prefHeight="107.0" prefWidth="448.0">
+         <columns>
+            <TableColumn fx:id="tblc_id2" prefWidth="75.0" text="Id" />
+            <TableColumn fx:id="tblc_Libelle2" prefWidth="75.0" text="Libelle" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
